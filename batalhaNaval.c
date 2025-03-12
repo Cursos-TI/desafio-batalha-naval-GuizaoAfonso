@@ -30,8 +30,6 @@ int main(){
     int navio2[3] = {3, 3, 3};
     int tabuleiro[10][10] = {0}; // matriz com todas a posições 0
 
-    imprimirTabuleiro(tabuleiro); // primeira impressão zerado
-
     // primeiro navio no tabuleiro
     for(int k = 0; k < 3; k++){ 
         tabuleiro[1 + 1][k + 1] = navio1[k];  
