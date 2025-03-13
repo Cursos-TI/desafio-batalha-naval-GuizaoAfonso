@@ -28,6 +28,8 @@ void imprimirTabuleiro(int tabuleiro[10][10]){
 int main(){
     int navio1[3] = {3, 3, 3};
     int navio2[3] = {3, 3, 3};
+    int navio3[3] = {3, 3, 3};
+    int navio4[3] = {3, 3, 3};
     int tabuleiro[10][10] = {0}; // matriz com todas a posições 0
 
     // primeiro navio no tabuleiro
@@ -37,11 +39,25 @@ int main(){
     }
     // segundo navio no tabuleiro
     for(int l = 0; l < 3; l++){
-        tabuleiro[4 + l][7] = navio2[l]; 
+        tabuleiro[5 + l][7] = navio2[l]; 
         // navio vertical h5, h6 e h7
     }
+    // terceiro navio no tabuleiro
+    for(int n = 0; n < 1; n++){
+        tabuleiro[9 + n][4] = navio3[n]; 
+        tabuleiro[8 + n][3] = navio3[n];
+        tabuleiro[7 + n][2] = navio3[n];
+        // navio diagonal c8, d9 e e10
+    }
+    // quarto navio no tabuleiro
+    for(int o = 0; o < 1; o++){
+        tabuleiro[0 + o][9] = navio4[o];
+        tabuleiro[1 + o][8] = navio4[o];
+        tabuleiro[2 + o][7] = navio4[o];
+        // navio diagonal h3, i2 e j1
+    }
 
-    printf("\n ### BATALHA NAVAL ### \n");
+    printf("\n ## BATALHA NAVAL ## \n");
     imprimirTabuleiro(tabuleiro); 
     //impressão do tabuleiro com os navios
 
